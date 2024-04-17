@@ -48,4 +48,14 @@ public abstract class DatosPersonales { //La clase contiene la palabra reservada
     protected void setWhatsapp(String whatsapp) {
         this.whatsapp = whatsapp;
     }
+
+
+    public String obtenerDatosPersonales() {
+        return "Nombre: " + nombre + "\n" +
+                "Apellidos: " + apellidos + "\n" +
+                "Correo: " + correo + "\n" +
+                "WhatsApp: " + whatsapp;
+    }
 }
+
+
