@@ -2,6 +2,7 @@ package gestor.empresarial.empresa;
 
 import gestor.empresarial.empleados.Empleados; //Importacion de paquetes necesarios
 import gestor.errores.GestionErrores;
+
 public final class Empresa { //Creacion de la clase pero incluyendo la palabla clave final
     private String nombreEmpresa; //Declaracion de atributos privados
     private String representanteLegal;

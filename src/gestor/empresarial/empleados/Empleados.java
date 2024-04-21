@@ -5,6 +5,9 @@ import gestor.empresarial.contrato.*;
 import gestor.empresarial.datos.DatosEmpresariales;
 import gestor.errores.GestionErrores;
 
+/*Declaracion de la clase empleados incluyendo la palabra reservada final e implemntando con la interfaz,
+* declaracion de atributos, constructores, uso de metodos como el add el cual nos ayudara a añadir elementos
+* de datos al paquete DatosPersonales y el comoponente show el cual nos permite abrir un cuadro de dialogo*/
 public final class Empleados implements iEmpleados{
     public GestionErrores error;
     private DatosEmpresariales[] DatoPersonal;
