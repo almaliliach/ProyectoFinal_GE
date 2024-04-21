@@ -5,7 +5,7 @@ import gestor.empresarial.contrato.*;
 import gestor.empresarial.datos.DatosEmpresariales;
 import gestor.errores.GestionErrores;
 
-public abstract   class Empleados implements iEmpleados{
+public final class Empleados implements iEmpleados{
     public GestionErrores error;
     private DatosEmpresariales[] DatosPersonal;
     private int i; //Declaracion de atributos
@@ -23,43 +23,41 @@ public abstract   class Empleados implements iEmpleados{
         error = new GestionErrores();
     }
 
-    public void addContrato(int c1, int c2, String c3,Cargos c4 ){//Agreacion de valores
-    }
-    private int findEmpleado(int nun){ //Metodo
-        return nun;
+    public void addDatosPersonales( String nombre, String apellidos, String correo,String whatsapp) {
 
+        if (i < 100) {
+            DatosPersonal[i] = new DatosEmpresariales();
+            DatosPersonal[i].setId(i+1);
+            DatosPersonal[i].setNombre(nombre);
+            DatosPersonal[i].setApellidos(apellidos);
+            DatosPersonal[i].setCorreo(correo);
+            DatosPersonal[i].setWhatsapp(whatsapp);
+            this.i++;
+            System.out.println("Datos personales agregados");
+        } else {
+            //error.getError(2);
+        }
     }
-    private int findEmpleado(String nun2 ){
-        return 0;//duda
-    }
-    public void setWhatsApp(int q,String w){// Creacion del set el cual sirve para insertar un valor
-    }
-    private String datosPersonales(int dp){
-        return null;//duda
 
-    }
-    public String getInfoEmpleado(String n){//Creacion del get el cual sirve para extraer
-        return n;//duda
-    }
-    public void setAdscripcion(int id, String adscripcion){
-
-    }
-    public void setTelefonoExtesion(int i, String extension){
-
-    }
-    public void setPuesto(int p, String puesto){
-    }
     public void showDatosEmpleados(){
+        for (int k = 0; k<i; k++) {
+            System.out.println("Id: " + DatosPersonal[k].getId()+", Nombre: "+DatosPersonal[k].getNombre()+", Apellidos: "+DatosPersonal[k].getApellidos()+", Correo: "+DatosPersonal[k].getCorreo()+", WhatsApp: "+DatosPersonas[k].getWhatsapp()
+                    + ", Adscripción: " + DatosPersonal[k].getAdscripcion()+", Telefono exterior: "+DatosPersonal[k].getTelefonoExterior()+", Puesto: "+DatosPersonal[k].getPuesto());
+    }
 
-    }
-    public void showContratosEmpleado(int CE){
+        public void addContrato(int id, int noContrato, int annio, String String horario, Cargos Cargos tipocargo) {
+            Contratos[j] = new Contrato(id);
+            if (this.j < 100) {//mejorar validasion
+                Contratos[j].setNoContrato(noContrato);
+                Contratos[j].setAnnio(annio);
+                Contratos[j].setHorario(horario);
+                Contratos[j].setTipoCargos(tipocargo);
+                this.j++;
+                System.out.println("Datos del contrato agregados");
+            } else {
+                error.getError(1);
+            }
+        }
 
-    }
-    public int getAntiguedad(int Ai){
-        return 0;
-    }
-    public void setCargo( Cargos ca){
-
-    }
 }
 

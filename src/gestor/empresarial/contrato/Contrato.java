@@ -10,6 +10,7 @@ public final class Contrato {  //creacion de la clase Contrato con la palabra fi
     public Contrato (int id){ //creacion del constructor
         this.id = id;
         this.tipoCargos = Cargos.sindicalizado;
+
         /*tipoCargos = Cargos.confianza; //Instanciamos los atributos
         tipoCargos = Cargos.sindicalizado;
         tipoCargos = Cargos.temporal;*/
