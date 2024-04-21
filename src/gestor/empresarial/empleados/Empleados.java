@@ -5,7 +5,7 @@ import gestor.empresarial.contrato.*;
 import gestor.empresarial.datos.DatosEmpresariales;
 import gestor.errores.GestionErrores;
 
-public abstract class Empleados implements iEmpleados{
+public abstract   class Empleados implements iEmpleados{
     public GestionErrores error;
     private DatosEmpresariales[] DatosPersonal;
     private int i; //Declaracion de atributos

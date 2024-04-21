@@ -7,19 +7,21 @@ public final class Empresa { //Creacion de la clase pero incluyendo la palabla c
     private String representanteLegal;
     private String telefono;
     private String rfc;
-    public Empleados datosRH;//Declaracion de atrubutos publicos
+    public Empleados datosRH;
     public GestionErrores error;
     public Empresa(String nombre, String direccion){//Metodo
 
     }
-    public void setRepresentanteLegal(String nombre){ // Creación del set el cual sirve para insertar un valor
-        this.representanteLegal= representanteLegal;//asignacion
+    public void setRepresentanteLegal(String nombre){
     }
+
     public String getRepresentanteLegal(){//Creación del get el cual sirve para extraer
-        return representanteLegal; //Devolucion de un valor
+        System.out.print("El representante legal: ");
+        return "A";
+
     }
     public void setTelefono(String numero){
-        this.telefono=telefono;
+
     }
     public String gettlnfo() {
         String tlnfo= null;
