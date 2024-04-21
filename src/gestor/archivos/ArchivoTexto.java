@@ -29,12 +29,12 @@ public class ArchivoTexto implements iFileText {
             this.modoLectura = false;
             this.modoEscritura = false;
         }
-        catch (Exception e){
-            System.out.println(" AVISO: Los errores no se guaradaran en un .txt, no se encuentra el archivo");
+        catch (Exception a){
+            System.out.println(" Los errores no se encuentran en un archivo ");
             this.archivoExistente=false;
         }
     }
-    public void AbrirModoLectura(){//Aqui se implementan los metodos de la interfaz previamente vista
+    public void AbrirModoLectura(){//Implementacion
         if(archivoExistente){
             try{
                 fr = new FileReader(this.file.getAbsoluteFile());
@@ -43,7 +43,7 @@ public class ArchivoTexto implements iFileText {
 
             }catch
             (Exception e){
-                System.out.println("Error: archivo no se puede abrir en modo lectura");
+                System.out.println("Error: NO SE PUEDE ABRIR EN MODO LECTURA");
             }
         }
     }
@@ -51,19 +51,19 @@ public class ArchivoTexto implements iFileText {
         if(archivoExistente == true){
             try{
                 return this.br.readLine();
-            }catch (Exception e){
+            }catch (Exception a){
             }
         }
         return null;
     }
     public void AbrirModoEscritura(){
         if(archivoExistente){
-            try{     /*todo lo que dentro de las llaves esta en supervision*/
-                fw = new FileWriter(this.file.getAbsoluteFile(),true);//entre la ruta y el archivo getAbsoluteFile completito
-                bw = new BufferedWriter(this.fw);//BufferedWriter cargar en memoria todo el archivo
+            try{
+                fw = new FileWriter(this.file.getAbsoluteFile(),true);
+                bw = new BufferedWriter(this.fw);
                 modoEscritura=true;
 
-            }catch(Exception e){
+            }catch(Exception a){
 
             }
         }
@@ -73,7 +73,7 @@ public class ArchivoTexto implements iFileText {
             try{
                 this.bw.write(texto+"\n");
             }catch (Exception e){
-                System.out.println("Error: No se puede escribir informacion en el archivo");
+                System.out.println("Error:No se permite editar el archivo");
             }
         }
     }
@@ -82,7 +82,7 @@ public class ArchivoTexto implements iFileText {
             try{
                 this.bw.close();
                 this.fw.close();
-            }catch (Exception e){
+            }catch (Exception a){
 
             }
         }
