@@ -1,3 +1,3 @@
 public class PrincipalRepertorio {
-    public class Principal {}
+    public static void main(String[] arg){}
 }
