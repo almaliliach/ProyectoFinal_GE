@@ -39,25 +39,5 @@ public final class Empleados implements iEmpleados{
         }
     }
 
-    public void showDatosEmpleados(){
-        for (int k = 0; k<i; k++) {
-            System.out.println("Id: " + DatosPersonal[k].getId()+", Nombre: "+DatosPersonal[k].getNombre()+", Apellidos: "+DatosPersonal[k].getApellidos()+", Correo: "+DatosPersonal[k].getCorreo()+", WhatsApp: "+DatosPersonas[k].getWhatsapp()
-                    + ", Adscripción: " + DatosPersonal[k].getAdscripcion()+", Telefono exterior: "+DatosPersonal[k].getTelefonoExterior()+", Puesto: "+DatosPersonal[k].getPuesto());
-    }
-
-        public void addContrato(int id, int noContrato, int annio, String String horario, Cargos Cargos tipocargo) {
-            Contratos[j] = new Contrato(id);
-            if (this.j < 100) {//mejorar validasion
-                Contratos[j].setNoContrato(noContrato);
-                Contratos[j].setAnnio(annio);
-                Contratos[j].setHorario(horario);
-                Contratos[j].setTipoCargos(tipocargo);
-                this.j++;
-                System.out.println("Datos del contrato agregados");
-            } else {
-                error.getError(1);
-            }
-        }
-
 }
 
