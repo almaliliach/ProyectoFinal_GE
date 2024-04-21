@@ -1,19 +1,17 @@
 package gestor.empresarial.contrato;
 
+
 public final class Contrato {  //creacion de la clase Contrato con la palabra final la cual es una clase que no puede heredar solo instanciar
-    private int id; //Atrubuto
-    private int noContrato; //Atributo
-    private int annio; //Atributo
-    private String horario;//Atributo
-    private Cargos tipoCargos;//Atributo
+    private int id;
+    private int noContrato;
+    private int annio;
+    private String horario;
+    private Cargos tipoCargos;
 
     public Contrato (int id){ //creacion del constructor
         this.id = id;
         this.tipoCargos = Cargos.sindicalizado;
 
-        /*tipoCargos = Cargos.confianza; //Instanciamos los atributos
-        tipoCargos = Cargos.sindicalizado;
-        tipoCargos = Cargos.temporal;*/
     }
     public void setId(int id) {
         this.id = id;

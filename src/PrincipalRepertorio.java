@@ -5,6 +5,13 @@ import gestor.errores.GestionErrores;
 
 import java.util.Scanner;
 
+/*En este apartado se encuentra el Repertorio, es decir el main principal, el cual abarca los distintos
+* atributos de los diferentes paquetes creados para poder ser ejecutado correctamente, para comenzar se
+* instancia para que se pueda especificar la iformacion, declaramos atributos que seran necesarios,
+* utilizamos un do/while el cual nos ayudo para crear el cuerpo del bucle mientras cumple la condicion
+* del switch  el cual evaluara las diferentes opciones solicitadas, sin olvidar que tenemos que integrar
+* los diferentes mensajes para saber que se solicita*/
+
 public class PrincipalRepertorio{
     public static void main(String[] args){
 
@@ -19,7 +26,7 @@ public class PrincipalRepertorio{
         String whatsApp;
 
         String ads;
-        String Tle;
+        String telefono;
         String Puesto;
 
         String id ;
@@ -27,23 +34,23 @@ public class PrincipalRepertorio{
         String annio;
         int op = 0;
         do{
-            System.out.println("\n \nBienvenido al gestor empresarial de la empresa ITERA ");
+            System.out.println("\n BIENVEDIDO AL GESTOR EMPRESARIAL DE LA IMPRESA MEXICANA ITERA S.A DE C.V");
             System.out.println(" ***REPERTORIO***");
-            System.out.println("1) Agregar datos personales");
-            System.out.println("2) Mostrar datos personales");
-            System.out.println("3) Agregar datos empresariales");
-            System.out.println("4) Mostrar datos de los empleados");
-            System.out.println("5) Agregar datos del Contrato");
-            System.out.println("6) Mostrar contrato");
-            System.out.println("7) Información de la empresa");
-            System.out.println("8) Salir");
+            System.out.println("1) AGREGAR DATOS PERSONALES");
+            System.out.println("2) MOSTRAR DATOS PERSONALES ");
+            System.out.println("3) AGREGAR DATOS EMPRESARIALES");
+            System.out.println("4) MOSTRAR DATOS EMPRESARIALES");
+            System.out.println("5) AGREGAR DATOS DEL CONTRATO CORRESPONDIENTE");
+            System.out.println("6) MOSTRAR CONTRATO");
+            System.out.println("7) INFORMACIÓN DE LA EMPRESA ");
+            System.out.println("8) SALIR");
 
             System.out.println("Seleccione una opción: ");
 
             op=entrada.nextInt();
             switch (op) {
                 case 1:
-                    System.out.println("< Ingresar datos personales >");
+                    System.out.println("AGREGAR DATOS PERSONALES");
                     entrada.nextLine();
 
                     System.out.println("Nombre: ");
@@ -58,64 +65,63 @@ public class PrincipalRepertorio{
                     System.out.println("WhatsApp: ");
                      whatsApp= entrada.nextLine();
 
-                    datos.addDatosPersonales(nombre, apellidos , correo,whatsApp);
-
-                    System.out.println("Su id correspondiente es: " + datos.getId());
+                    datos.addDatosPersonales(nombre, apellidos , correo, whatsApp);
+                    System.out.println("\n");
+                    System.out.println("ID OTORGADO: " + datos.getId());
                     break;
                 case 2:
-                    System.out.println("< Mostrando datos personales >");
-                    System.out.println("Datos del empleado:");
-
+                    System.out.println("MOSTRAR DATOS PERSONALES");
                     datos.showDatosPersonales();
                     break;
 
                 case 3:
-                    System.out.println("< Agregar datos empresariales > ");
+                    System.out.println("AGREGAR DATOS EMPRESARIALES");
                     entrada.nextLine();
-                    System.out.println("Ingresar el id del aspirante: ");
+                    System.out.println("Ingresa el Id asignado: ");
                     id = entrada.nextLine();
 
                     if (Integer.parseInt(id) > 0 && Integer.parseInt(id) <= datos.getId()) {
-                        System.out.println("Ingrese la Adscripcion: ");
+                        System.out.println("Ingresar Adscripcion: ");
                         ads = entrada.nextLine();
-                        System.out.println("Ingrese el Telefono Exterior: ");
-                        Tle = entrada.nextLine();
-                        System.out.println("Ingrese el puesto: ");
+                        System.out.println("Ingresar Telefono Exterior: ");
+                        telefono = entrada.nextLine();
+                        System.out.println("Ingresar Puesto: ");
                         Puesto = entrada.nextLine();
-                        datos.addDatosEmpresariales(Integer.parseInt(id) - 1, ads, Tle, Puesto);
+                        datos.addDatosEmpresariales(Integer.parseInt(id) - 1, ads, telefono, Puesto);
                     } else {
                         System.out.println(error.getError(2));
                     }
                     break;
                 case 4:
-                    System.out.println(" <  Mostrar datos empresariales >");
+                    System.out.println("MOSTRAR DATOS EMPRESARIALES");
                     System.out.println("\n");
                     System.out.println();
                     datos.showDatosEmpleado();
                     break;
 
                 case 5:
-                    System.out.println("< Agregar datos del contrato > ");
+                    System.out.println("AGREGAR DATOS DEL CONTRATO CORRESPONDIENTE");
                     entrada.nextLine();
-                    System.out.println("Ingresar el id del trabajador");
+                    System.out.println("Ingresar Id del Trabajador");
                     id = entrada.nextLine();
 
                     if (Integer.parseInt(id) > 0 && Integer.parseInt(id) <= datos.getId()) {
 
-                        System.out.print("Ingrese el ID del contrato: ");
+                        System.out.print("Ingresar ID del contrato: ");
                         int idContrato = entrada.nextInt();
 
                         entrada.nextLine();
-                        System.out.println("Ingrese el numero de contrato:");
+                        System.out.println("Ingresar numero de contrato:");
                         cont = entrada.nextLine();
-                        System.out.println("Ingrese el año:");
+                        System.out.println("Ingresar año:");
                         annio = entrada.nextLine();
-                        System.out.println("Ingrese el horario:");
+                        System.out.println("Ingresar horario:");
                         String hor = entrada.nextLine();
                         System.out.println("Tipos de cargo disonibles:");
                         for (Cargos cargo : Cargos.values()) {
                             System.out.println(cargo.name());
                         }
+
                         System.out.println(" A)Sindicalizado\n B)confianza\n C)temporal\n Seleccione el tipo de cargo:");
                         String tipoCargoStr = entrada.nextLine();
                         Cargos tipoCargo = Cargos.sindicalizado;
@@ -140,17 +146,17 @@ public class PrincipalRepertorio{
                     break;
 
                 case 6:
-                    System.out.println(" ----- Mostrando datos de los contratos ----- ");
+                    System.out.println("MOSTRAR CONTRATO");
                     datos.showContratosEmpleado(2);
                     break;
 
                 case 7:
-                    System.out.println(" ----- Sobre ITERA ----- ");
+                    System.out.println("INFORMACIÓN DE LA EMPRESA ITERA");
                     datos.showEmpresa();
                     break;
 
                 case 8:
-                    System.out.println("Cerrando gestor empresarial de ITERA");
+                    System.out.println("CERRANDO GESTOR EMPRESARIAL DE ITERA S.A DE C.V");
                     break;
 
                 default:

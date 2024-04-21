@@ -1,6 +1,7 @@
 package gestor.archivos;
 
-public class ControlArchivos {//Declaracipn de la clase ControlArchivos pero incluyendo la palabra clave abstract
+//Del esqueleto origina lretiramos la palabra clave abstract ya que no nos permitia avanzar si la incluiamos*/
+public class ControlArchivos {
     private String archivo; //Declaracion de atributos
     public ControlArchivos(String archivo){ //Constructor
     }

@@ -8,6 +8,11 @@ import gestor.empresarial.datos.*;
 import gestor.empresarial.empleados.*;
 import gestor.empresarial.empresa.*;
 import gestor.archivos.ArchivoTexto;
+
+/*Como se menciona mas adelante realizamos la declaracion de la clase, incluimos el metodo map el cual nos permitira
+* transformar un objeto en otro a traves de una funcion, incluimos constructores e instanciamos onjeto, se modificaron
+* los get originales del esqueleto y solo dejamos uno el cual nos sera util*/
+
 public final class GestionErrores { //Creacion de la Clase GestionErrores incluyendo la palabra clave final
     private Map<Integer,String> error;
     private ArchivoTexto almacenar;
@@ -25,9 +30,7 @@ public final class GestionErrores { //Creacion de la Clase GestionErrores incluy
         error.put(3, "Opcion incorrecta");
 
     }
-    /*public void setNoError(int e1, String error){ // Creación del set el cual sirve para insertar un valor
 
-    }*/
     public String getError(int folio){//Creación del get el cual sirve para extraer valores
         almacenar.AbrirModoEscritura();
         cargarErrores();
@@ -36,12 +39,7 @@ public final class GestionErrores { //Creacion de la Clase GestionErrores incluy
         almacenar.Cerrar();
         return error.get(folio);
     }
-    /*public String getErrorTecnico(){
-        return null;
-    }
-    public boolean ExisteError(){
-        return false;
-    }*/
+
 
 }
 

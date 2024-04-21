@@ -3,6 +3,11 @@ import java.util.*;
 
 import java.io.*;//Lista de paquetes que contiene clases determinadas
 
+/*En este apartado al esqueleto principal le modificamos distintas cosas puesto que con algunas palabras reservadas
+* marcaba diferentes errores, se programo la clase Archivo para que implementara la interfaz, declaramos los atributos
+* y tambien incluimos atributos con ayuda de una libreria, se declararon los distintos metodos incluyendo la informacion
+* que le correspondia a cada uno pero teniendo en cuenta que en algunos se inclui un if el cual nos ayudo a ejecutar una
+* sentencia.*/
 public class ArchivoTexto implements iFileText {
     private File file; //Declaracion de atributos publicos
     private FileReader fr;

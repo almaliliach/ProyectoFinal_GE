@@ -1,6 +1,6 @@
 package gestor.empresarial.datos;
 
-public class DatosPersonales { //La clase contiene la palabra reservada abstract, lo cual ofrece instancia
+public abstract class DatosPersonales { //La clase contiene la palabra reservada abstract, lo cual ofrece instancia
     private int id; //Declaracion de atributos
     private String nombre;
     private String apellidos;

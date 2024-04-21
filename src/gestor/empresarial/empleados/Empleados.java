@@ -63,8 +63,8 @@ public final class Empleados implements iEmpleados{
 
     public void showDatosEmpleado() {
         for (int x = 0; x<i; x++) {
-            System.out.println("Id: \n" + DatoPersonal[x].getId()+"Nombre: \n" + DatoPersonal[x].getNombre()+"Apellidos:  \n" + DatoPersonal[x].getApellidos()+"Correo: \n" + DatoPersonal[x].getCorreo() + "WhatsApp: "+DatoPersonal[x].getWhatsapp()
-                    + ", Adscripción: " + DatoPersonal[x].getAdscripcion()+", Telefono exterior: "+DatoPersonal[x].getTelefonoExterior()+", Puesto: "+DatoPersonal[x].getPuesto());
+            System.out.println("\n Id: " + DatoPersonal[x].getId()+ "\nNombre: " + DatoPersonal[x].getNombre()+ "\n Apellidos: " + DatoPersonal[x].getApellidos()+ "\n Correo: " + DatoPersonal[x].getCorreo() + "\n WhatsApp: "+DatoPersonal[x].getWhatsapp()
+                    + "\n Adscripción: " + DatoPersonal[x].getAdscripcion()+"\n Telefono exterior: "+DatoPersonal[x].getTelefonoExterior()+"\n Puesto: "+DatoPersonal[x].getPuesto());
         }
     }
 
@@ -85,7 +85,7 @@ public final class Empleados implements iEmpleados{
     public void showContratosEmpleado(int b) {
         for (int k = 0; k<j; k++) { /*linea agregada con int*/
             if (Contratos[k] != null) {
-                System.out.println("Id empleado: " + DatoPersonal[k].getId() + ", No de contrato: " + Contratos[k].getNoContrato() + ", Año: " + Contratos[k].getAnnio() + ", Horario: " + Contratos[k].getHorario() + ", Cargo: " + Contratos[k].getTipoCargos());
+                System.out.println("Id empleado: " + DatoPersonal[k].getId() + "\n No de contrato: " + Contratos[k].getNoContrato() + "\n Año: " + Contratos[k].getAnnio() + ",\n Horario: " + Contratos[k].getHorario() + "\n Cargo: " + Contratos[k].getTipoCargos());
             }
         }
     }

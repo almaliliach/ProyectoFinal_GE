@@ -1,6 +1,7 @@
 package gestor.empresarial.datos;
 
-public class DatosEmpresariales extends DatosPersonales{ //Clase DatosEmpresariales incluyendo la palabra clave final
+/*En la decl*/
+public class DatosEmpresariales extends DatosPersonales{
     //y un extends el cual ofrece herencia de la clase DatosPersonales
 
 
