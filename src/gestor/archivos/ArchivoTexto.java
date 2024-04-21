@@ -2,12 +2,6 @@ package gestor.archivos;
 import java.util.*;
 
 import java.io.*;//Lista de paquetes que contiene clases determinadas
-import gestor.archivos.*; //Importacion de los diferentes paquetes a utilizar
-import gestor.errores.*;
-import gestor.empresarial.contrato.*;
-import gestor.empresarial.datos.*;
-import gestor.empresarial.empleados.*;
-import gestor.empresarial.empresa.*;
 
 public class ArchivoTexto implements iFileText {
     private File file; //Declaracion de atributos publicos
@@ -29,8 +23,8 @@ public class ArchivoTexto implements iFileText {
             this.modoLectura = false;
             this.modoEscritura = false;
         }
-        catch (Exception a){
-            System.out.println(" Los errores no se encuentran en un archivo ");
+        catch (Exception e){
+            System.out.println(" Los errores no se encuentran en el archivo ");
             this.archivoExistente=false;
         }
     }
@@ -63,7 +57,7 @@ public class ArchivoTexto implements iFileText {
                 bw = new BufferedWriter(this.fw);
                 modoEscritura=true;
 
-            }catch(Exception a){
+            }catch(Exception e){
 
             }
         }

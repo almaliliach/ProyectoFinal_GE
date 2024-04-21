@@ -7,11 +7,12 @@ import gestor.empresarial.datos.*;
 import gestor.empresarial.empleados.*;
 import gestor.empresarial.empresa.*;
 public  interface  iEmpleados { //Declaracion de la interfaz
-    public String getInfoEmpleado(int empleado); //Declaracion de constantes disponibles
+    public void showDatosEmpleado();
+
+
+    /*public String getInfoEmpleado(int empleado); //Declaracion de constantes disponibles
 
     public String getInfoEmpleado(String empleado);
 
-    public void showDatosEmpleado();
-
-    public int getAntiguedad(int Ai);
+    public int getAntiguedad(int Ai);*/
 }
