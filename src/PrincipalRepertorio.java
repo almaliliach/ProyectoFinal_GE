@@ -40,7 +40,7 @@ public class PrincipalRepertorio{
             System.out.println("2) MOSTRAR DATOS PERSONALES ");
             System.out.println("3) AGREGAR DATOS EMPRESARIALES");
             System.out.println("4) MOSTRAR DATOS EMPRESARIALES");
-            System.out.println("5) AGREGAR DATOS DEL CONTRATO CORRESPONDIENTE");
+            System.out.println("5) AGREGAR DATOS DEL CONTRATO");
             System.out.println("6) MOSTRAR CONTRATO");
             System.out.println("7) INFORMACIÓN DE LA EMPRESA ");
             System.out.println("8) SALIR");
@@ -66,12 +66,12 @@ public class PrincipalRepertorio{
                      whatsApp= entrada.nextLine();
 
                     datos.addDatosPersonales(nombre, apellidos , correo, whatsApp);
-                    System.out.println("\n");
                     System.out.println("ID OTORGADO: " + datos.getId());
                     break;
                 case 2:
                     System.out.println("MOSTRAR DATOS PERSONALES");
                     datos.showDatosPersonales();
+                    System.out.println();
                     break;
 
                 case 3:
@@ -100,39 +100,37 @@ public class PrincipalRepertorio{
                     break;
 
                 case 5:
-                    System.out.println("AGREGAR DATOS DEL CONTRATO CORRESPONDIENTE");
+                    System.out.println("AGREGAR DATOS DEL CONTRATO");
                     entrada.nextLine();
-                    System.out.println("Ingresar Id del Trabajador");
+                    System.out.println("Ingresar Id del Trabajador: ");
                     id = entrada.nextLine();
 
                     if (Integer.parseInt(id) > 0 && Integer.parseInt(id) <= datos.getId()) {
 
-                        System.out.print("Ingresar ID del contrato: ");
+                        System.out.print("Ingresar ID del contrato:\n ");
                         int idContrato = entrada.nextInt();
-
                         entrada.nextLine();
-                        System.out.println("Ingresar numero de contrato:");
+                        System.out.println("Ingresar numero de contrato: ");
                         cont = entrada.nextLine();
-                        System.out.println("Ingresar año:");
+                        System.out.println("Ingresar año: ");
                         annio = entrada.nextLine();
-                        System.out.println("Ingresar horario:");
+                        System.out.println("Ingresar horario: ");
                         String hor = entrada.nextLine();
                         System.out.println("Tipos de cargo disonibles:");
                         for (Cargos cargo : Cargos.values()) {
-                            System.out.println(cargo.name());
                         }
 
-                        System.out.println(" A)Sindicalizado\n B)confianza\n C)temporal\n Seleccione el tipo de cargo:");
+                        System.out.println(" a)Sindicalizado\n b)confianza\n c)temporal\n Seleccione el tipo de cargo:");
                         String tipoCargoStr = entrada.nextLine();
                         Cargos tipoCargo = Cargos.sindicalizado;
                         switch(tipoCargoStr) {
-                            case "A":
+                            case "a":
                                 tipoCargo = Cargos.sindicalizado;
                                 break;
-                            case "B":
+                            case "b":
                                 tipoCargo = Cargos.confianza;
                                 break;
-                            case "C":
+                            case "c":
                                 tipoCargo = Cargos.temporal;
                                 break;
                         }

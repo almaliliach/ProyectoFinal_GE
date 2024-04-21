@@ -33,7 +33,7 @@ public final class Empleados implements iEmpleados{
             DatoPersonal[i].setCorreo(correo);
             DatoPersonal[i].setWhatsapp(whatsapp);
             this.i++;
-            System.out.println("Datos personales agregados con exito");
+            System.out.println("Datos guardados con exito");
         } else {
             //error.getError(2);
         }
@@ -44,7 +44,9 @@ public final class Empleados implements iEmpleados{
     }
     public void showDatosPersonales(){
         for(int x=0; x<i; x++){
-            System.out.println("Id: " + DatoPersonal[x].getId()+"," + "Nombre: \n"+DatoPersonal[x].getNombre()+"Apellidos: \n"+ DatoPersonal[x].getApellidos()+ "Correo: \n"+ DatoPersonal[x].getCorreo()+"WhatsApp: \n"+ DatoPersonal[x].getWhatsapp());
+            System.out.println("Id: " + DatoPersonal[x].getId()+"\n" + "Nombre:"+DatoPersonal[x].getNombre()+
+                    "\n"+ "Apellidos: "+ DatoPersonal[x].getApellidos()+"\n"+ "Correo: "+ DatoPersonal[x].getCorreo()+
+                    "\n" + "WhatsApp: "+ DatoPersonal[x].getWhatsapp());
         }
     }
 
@@ -55,7 +57,7 @@ public final class Empleados implements iEmpleados{
             DatoPersonal[Id].setTelefonoExterior(TelefonoExterior);
             DatoPersonal[Id].setPuesto(Puesto);
 
-            System.out.println("Datos Empresariales agregados con exito ");
+            System.out.println("Datos guardados con exito");
         } else {
             //error.getError(2);
         }
@@ -63,29 +65,33 @@ public final class Empleados implements iEmpleados{
 
     public void showDatosEmpleado() {
         for (int x = 0; x<i; x++) {
-            System.out.println("\n Id: " + DatoPersonal[x].getId()+ "\nNombre: " + DatoPersonal[x].getNombre()+ "\n Apellidos: " + DatoPersonal[x].getApellidos()+ "\n Correo: " + DatoPersonal[x].getCorreo() + "\n WhatsApp: "+DatoPersonal[x].getWhatsapp()
-                    + "\n Adscripción: " + DatoPersonal[x].getAdscripcion()+"\n Telefono exterior: "+DatoPersonal[x].getTelefonoExterior()+"\n Puesto: "+DatoPersonal[x].getPuesto());
+            System.out.println("Id: "+ DatoPersonal[x].getId()+ "\n"+ "Nombre: "  + DatoPersonal[x].getNombre()+ "\n"+
+                    "Apellidos: " + DatoPersonal[x].getApellidos() + "\n" + "Correo: " + DatoPersonal[x].getCorreo() + "\n" +
+                    "WhatsApp: "+DatoPersonal[x].getWhatsapp() + "\n" + "Adscripción: " +DatoPersonal[x].getAdscripcion()+ "\n" +
+                    "Telefono exterior: "+DatoPersonal[x].getTelefonoExterior()+ "\n" +"Puesto: "+DatoPersonal[x].getPuesto());
         }
     }
 
     public void addContrato(int id, int noContrato, int annio, String horario, Cargos tipoCargo) {
         Contratos[j] = new Contrato(id);
-        if (this.j < 100) {//mejorar validasion
+        if (this.j < 100) {
             Contratos[j].setNoContrato(noContrato);
             Contratos[j].setAnnio(annio);
             Contratos[j].setHorario(horario);
             Contratos[j].setTipoCargos(tipoCargo);
             this.j++;
-            System.out.println("Contrato agregado con exito ");
+            System.out.println("Datos guardados con exito");
         } else {
             error.getError(1);
         }
     }
 
     public void showContratosEmpleado(int b) {
-        for (int k = 0; k<j; k++) { /*linea agregada con int*/
+        for (int k = 0; k<j; k++) {
             if (Contratos[k] != null) {
-                System.out.println("Id empleado: " + DatoPersonal[k].getId() + "\n No de contrato: " + Contratos[k].getNoContrato() + "\n Año: " + Contratos[k].getAnnio() + ",\n Horario: " + Contratos[k].getHorario() + "\n Cargo: " + Contratos[k].getTipoCargos());
+                System.out.println("Id empleado: " + DatoPersonal[k].getId() + "\n"+ "No. de contrato: "
+                        + Contratos[k].getNoContrato()+ "\n" + "Año: " + Contratos[k].getAnnio()+ "\n"
+                        + "Horario: " + Contratos[k].getHorario() + "\n"+ "Cargo: " + Contratos[k].getTipoCargos());
             }
         }
     }
