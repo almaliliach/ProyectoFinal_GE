@@ -11,7 +11,7 @@ public final class GestionErrores { //Creacion de la Clase GestionErrores incluy
     private Map<Integer,String>error; //Declaracion de un atributo pero con el metodo map el cual permite trasformar
     //un objeto en otro mediante una funcion
     private boolean existeError; //Declaracion de atributo de tipo boleano
-    private int noError;
+    public  int noError;
     private String DescripcionTecnica;
     public GestionErrores(){ //Constructor
         error = new HashMap<Integer,String>();//Instanciar el objeto

@@ -2,14 +2,21 @@ package gestor.empresarial.datos;
 
 public final class DatosEmpresariales extends DatosPersonales{ //Clase DatosEmpresariales incluyendo la palabra clave final
     //y un extends el cual ofrece herencia de la clase DatosPersonales
+
+
     public  String adscripcion; //Declaracion de atributos
     public String telefonoExterior;
     public String puesto;
-    public  DatosEmpresariales (int id, String adscripcion, String telefonoExterior , String puesto){
+
+    public DatosEmpresariales(){
+
+    }
+
+    /*public  DatosEmpresariales (int id, String adscripcion, String telefonoExterior , String puesto){
         this.adscripcion= adscripcion;
         this.telefonoExterior = telefonoExterior;
         this.puesto= puesto;
-    }
+    }*/
     public String getAdscripcion(){//creacion del Set, el cual asina un valor al atributo
         return adscripcion;
     }

@@ -1,11 +1,15 @@
 package gestor;
-
+import gestor.empresarial.contrato.Cargos;
+import gestor.empresarial.contrato.Contrato;
 import gestor.empresarial.datos.DatosPersonales;
+import gestor.empresarial.datos.DatosEmpresariales;
+import gestor.empresarial.empleados.Empleados;
 
 import java.util.Scanner;
 
 public class Principal {//Clase Principal
-    public static void main(String[] arg){
+    public static <findEmpleado> void main(String[] arg){
+
         //DATOS PERSONALES
         String nombre;
         String apellido;
@@ -45,5 +49,8 @@ public class Principal {//Clase Principal
         puesto = dp.nextLine();
     }
 
+    //CONTRATO
 
-}
+
+    }
+

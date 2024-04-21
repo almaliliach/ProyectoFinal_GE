@@ -1,16 +1,28 @@
 package gestor.empresarial.empleados;
 
 import gestor.empresarial.contrato.Cargos; //Importacion de paquetes
+import gestor.empresarial.contrato.*;
+import gestor.empresarial.datos.DatosEmpresariales;
 import gestor.errores.GestionErrores;
 
-public abstract class Empleados implements iEmpleados{ //Declaracion de la clase Empleados pero incluyendo la palabra
-    //clave abstract la cual nos ayudara a implementar la clase con la interfaz iEmpleados.
-    private int i; //Declaracion de atributos
+public abstract class Empleados implements iEmpleados{
     public GestionErrores error;
+    private DatosEmpresariales[] DatosPersonal;
+    private int i; //Declaracion de atributos
+    private Contrato[] Contratos;
+    private int j;
+
+
+
+
     public Empleados(){//constructor
+        DatosPersonal = new DatosEmpresariales[50];
+        Contratos = new Contrato[50];
+        i = 0;
+        j = 0;
+        error = new GestionErrores();
     }
-    public void addDatosPersonales(String nom, String ape , String di){//El add sirve para agrear valores
-    }
+
     public void addContrato(int c1, int c2, String c3,Cargos c4 ){//Agreacion de valores
     }
     private int findEmpleado(int nun){ //Metodo

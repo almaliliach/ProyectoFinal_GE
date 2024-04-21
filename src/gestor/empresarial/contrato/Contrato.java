@@ -8,12 +8,18 @@ public final class Contrato {  //creacion de la clase Contrato con la palabra fi
     private Cargos tipoCargos;//Atributo
 
     public Contrato (int id){ //creacion del constructor
-        tipoCargos = Cargos.confianza; //Instanciamos los atributos
+        this.id = id;
+        this.tipoCargos = Cargos.sindicalizado;
+        /*tipoCargos = Cargos.confianza; //Instanciamos los atributos
         tipoCargos = Cargos.sindicalizado;
-        tipoCargos = Cargos.temporal;
-
+        tipoCargos = Cargos.temporal;*/
     }
-
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId() {
+        return id;
+    }
     public void setNoContrato(int noContrato){//Creacion del set el cual sirve para insertar
 
         this.noContrato = noContrato; //Asignamos
@@ -23,6 +29,13 @@ public final class Contrato {  //creacion de la clase Contrato con la palabra fi
         return noContrato;//Devuelve un valor
     }
 
+    public void setTipoCargos(Cargos tipoCargos) {
+        this.tipoCargos = tipoCargos;
+    }
+    public Cargos getTipoCargos() {
+        return tipoCargos;
+    }
+
     public void setAnnio(int annio) {
         this.annio = annio;//Asignamos
     }
@@ -30,6 +43,13 @@ public final class Contrato {  //creacion de la clase Contrato con la palabra fi
     public int getAnnio() {
 
         return annio;//Devuelve un valor
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+    public String getHorario() {
+        return horario;
     }
 } //final de la clase
 
