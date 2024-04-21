@@ -90,8 +90,8 @@ public final class Empleados implements iEmpleados{
         }
     }
     public void showEmpresa(){
-        System.out.println("Empresa Mexicana KIO NETWORKS");
-        System.out.println("Telefono: 222-546-345");
+        System.out.println("Empresa Mexicana Itera S.A de C.V");
+        System.out.println("Telefono: 55-3300-0650");
         System.out.println("RFC: GHT469357839A");
     }
 }
