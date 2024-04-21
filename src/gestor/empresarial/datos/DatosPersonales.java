@@ -8,7 +8,7 @@ public class DatosPersonales { //La clase contiene la palabra reservada abstract
     private String whatsapp;
 
 
-    public void setId() {
+    public void setId(int id) {
         this.id = id;
     }
     public int getId() {

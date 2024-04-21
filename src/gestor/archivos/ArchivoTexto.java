@@ -1,4 +1,5 @@
 package gestor.archivos;
+import java.util.*;
 
 import java.io.*;//Lista de paquetes que contiene clases determinadas
 import gestor.archivos.*; //Importacion de los diferentes paquetes a utilizar
