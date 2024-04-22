@@ -21,7 +21,7 @@ public final class GestionErrores { //Creacion de la Clase GestionErrores incluy
 
     public GestionErrores(){ //Constructor
         error = new HashMap<Integer,String>();//Instanciar el objeto
-        almacenar=new ArchivoTexto("D:\\ESTANCIA\\Programas\\Adobe Animate CC 2018");
+        almacenar=new ArchivoTexto("C:\\Users\\fpbel\\Downloads\\Errores\\.txt");
         almacenar.AbrirModoEscritura();
     }
     private void cargarErrores(){//Metodo
